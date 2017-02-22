@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />  
+<title>prizepage</title>
+<link href="css/main.css" rel="stylesheet">
+</head>
+<body class="prizebg">
+
+<div id="prizecontenttop"></div> 
+<div class="prizecontentbox">
+  	<ul class="nav-bar cf"><li class="has-flyout first"><a class="main " href="/collections/current-home">Home</a><a href="/collections/current-home" class="flyout-toggle"><span></span></a><div class="flyout small"><ul class="sub-menu"><li><a href="/collections/current-home">Current Deals</a></li><li><a href="/collections/past-home">Past Deals</a></li></ul></div></li><li class="has-flyout"><a class="main " href="/collections/current-fashion">Fashion</a><a href="/collections/current-fashion" class="flyout-toggle"><span></span></a><div class="flyout small"><ul class="sub-menu"><li><a href="/collections/current-fashion">Current Deals</a></li><li><a href="/collections/past-fashion">Past Deals</a></li></ul></div></li><li class="has-flyout"><a class="main " href="/collections/current-sport">Sport</a><a href="/collections/current-sport" class="flyout-toggle"><span></span></a><div class="flyout small"><ul class="sub-menu"><li><a href="/collections/current-sport">Current Deals</a></li><li><a href="/collections/past-sport">Past Deals</a></li></ul></div></li><li class="has-flyout"><a class="main " href="/collections/current-kid">Kid</a><a href="/collections/current-kid" class="flyout-toggle"><span></span></a><div class="flyout small"><ul class="sub-menu"><li><a href="/collections/current-kid">Current Deals</a></li><li><a href="/collections/past-kid">Past Deals</a></li></ul></div></li><li class="has-flyout"><a class="main " href="/collections/current-pet">Pet</a><a href="/collections/current-pet" class="flyout-toggle"><span></span></a><div class="flyout small"><ul class="sub-menu"><li><a href="/collections/current-pet">Current Deals</a></li><li><a href="/collections/past-pet">Past Deals</a></li></ul></div></li><li class="has-flyout"><a class="main " href="/collections/current-tech">Tech</a><a href="/collections/current-tech" class="flyout-toggle"><span></span></a><div class="flyout small"><ul class="sub-menu"><li><a href="/collections/current-tech">Current Deals</a></li><li><a href="/collections/past-tech">Past Deals</a></li></ul></div></li><li class="has-flyout"><a class="main " href="/collections/adult-deals">Adult</a><a href="/collections/adult-deals" class="flyout-toggle"><span></span></a><div class="flyout small"><ul class="sub-menu"><li><a href="/collections/adult-deals">Current Deals</a></li><li><a href="/collections/past-deals-adult">Past Deals</a></li></ul></div></li><li class="has-flyout"><a class="main " href="/collections/theme-day">Theme</a><a href="/collections/theme-day" class="flyout-toggle"><span></span></a><div class="flyout small"><ul class="sub-menu"><li><a href="/collections/jewelry">New Arrival Jewelry</a></li><li><a href="/collections/bikini-show">Bikini Show</a></li><li><a href="/collections/watches">New Arrival Watches</a></li><li><a href="/collections/apple-accesories">Apple Accesories</a></li><li><a href="/collections/lazybones-day">Lazybones&#39; Day</a></li><li><a href="/collections/women-s-clothing-new">New Women&#39;s Clothing</a></li></ul></div></li>
+	</ul>
+  
+  <div class="prizecontent">
+	  <b class="prizenice">Nice One!</b>
+	  <b class="prizewin">Now - for a chance to win a prize... </b>
+	  <b class="prizeclick"><b>Click here</b> for more details</b>
+	  <p class="prizestart">Start Sharing on</p>
+	  <div  class="prizeimg">	
+		  <a href="#" target="_blank"><img src="images/google.jpg"></a> 
+		  <a href="#" target="_blank"><img src="images/facebook.jpg"></a> 
+		  <a href="#" target="_blank"><img src="images/twitter.jpg"></a>
+	  </div> 
+  </div>
+</div> 
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+/* DROPDOWN NAV ------------- */
+
+	var lockNavBar = false;
+	$('.nav-bar a.flyout-toggle').live('click', function(e) {
+		e.preventDefault();
+		var flyout = $(this).siblings('.flyout');
+		if (lockNavBar === false) {
+			$('.nav-bar .flyout').not(flyout).slideUp(500);
+			flyout.slideToggle(500, function(){
+				lockNavBar = false;
+			});
+		}
+		lockNavBar = true;
+	});
+
+
+    $('.nav-bar>li.has-flyout').hover(function() {
+      $(this).children('.flyout').stop(true,true).fadeIn(300);
+	  //$(this).children('.flyout').show();
+	  $(this).addClass('menu-active');
+    }, function() {
+      //$(this).children('.flyout').stop(true,true).slideUp(200);
+	  $(this).children('.flyout').hide();
+	  $(this).removeClass('menu-active');
+    })  
+
+</script>	
+
+</body>
+</html>

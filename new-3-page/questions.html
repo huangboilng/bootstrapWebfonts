@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />  
+<title>questionpage</title>
+<link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="quescontentbox">
+  <div class="quescontenttop"></div>
+  <div class="quescontentleft">
+	  <b>What we are：</b>
+	  <p>DrGrab - Top Daily Deal Site in Australia.</p>
+	  <b>What we do：</b>
+	  <p>We are offering a wide range of amazing products with unbeatable price and quality on the local market.</p>	  
+  </div>
+  <div class="quescontentright">    
+		<div class="boxcontext">
+			<div class="queslibox">
+			    <div class="quesliboxp"><p>1) If yesterday was tomorrow,so today is Friday. </p><p>Q: What day is it "today"?</p></div>
+				<ul class="quesliboxul">
+					<li><input type="checkbox"><b class="quesliboxmsg">A.Wednesday</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">B.Thursday</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">C.Friday</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">D.Sunday</b></li>
+				</ul>
+			</div>
+			
+			<div class="queslibox">
+			    <div class="quesliboxp"><p>2) In what month do women talk the least?</p></div>
+				<ul class="quesliboxul">
+					<li><input type="checkbox"><b class="quesliboxmsg">A.February</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">B.September</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">C.January</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">D.June</b></li>
+				</ul>
+			</div>
+			<div class="queslibox">
+			    <div class="quesliboxp"><p>3) From what number can you take half and leave nothing?</p></div>
+				<ul class="quesliboxul">
+					<li><input type="checkbox"><b class="quesliboxmsg">A.1</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">B.9</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">C.8</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">D.5</b></li>
+				</ul>
+			</div>
+			<div class="queslibox">
+			    <div class="quesliboxp"><p>4) 6,11,13,24,24, (   )</p></div>
+				<ul class="quesliboxul">
+					<li><input type="checkbox"><b class="quesliboxmsg">A.38</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">B.41</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">C.44</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">D.47</b></li>
+				</ul>
+			</div>
+			<div class="queslibox">
+			    <div class="quesliboxp"><p>5) -5,-7,-8,-6,1,9,20,(   )</p></div>
+				<ul class="quesliboxul">
+					<li><input type="checkbox"><b class="quesliboxmsg">A.36</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">B.38</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">C.42</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">D.56</b></li>
+				</ul>
+			</div>
+			<div class="queslibox">
+			    <div class="quesliboxp"><p>6)</p></div>
+				<ul class="quesliboxul quesulimg">
+					<li><input type="checkbox"><b class="quesliboxmsg">A.</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">B.</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">C.</b></li>
+					<li><input type="checkbox"><b class="quesliboxmsg">D.</b></li>
+				</ul>
+			</div>
+			<div class="quesliboxbut"><button type="submit" class="contentright-but">ENTER</button></div>
+		</div>
+	</div>
+</div> 
+
+<script src="bootstrap/js/jquery.min.js"></script>   
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".imgbox li").hover(function(){
+	  $(this).css("border","none");
+	  $(this).find("img").css({width: "176px", height: "124px"}); 
+	  
+      var indexval = $(this).index(".imgbox li");
+
+	  $(".imgbox li").not(":eq("+parseInt(parseInt(indexval))+")").css({border: "6px #FFFFFF solid"});
+	  $(".imgbox li").not(":eq("+parseInt(parseInt(indexval))+")").find("img").css({ width: "159px", height: "112px"});
+	  
+      $(".msgimgbox li").not(":eq("+parseInt(parseInt(indexval))+")").hide();	
+      $(".msgimgbox li:eq("+ indexval +")").css('display','block');
+  });
+});
+
+</script>	
+
+</body>
+</html>
